@@ -1,0 +1,47 @@
+Ubuntu安装时的硬盘分区:
+https://blog.csdn.net/u012052268/article/details/77145427
+(其中Swap分区设置为内存的1~2倍)
+
+Ubuntu 类似Windows的资源管理器 gnome-system-monitor,可以查看Ubuntu的Swap分区大小。
+终端运行
+$gnome-system-monitor
+https://blog.csdn.net/dongjideyu/article/details/17007679
+
+NVIDIA显卡驱动的安装
+https://blog.csdn.net/qq_30163461/article/details/80314630
+
+Ubuntu查看NVIDIA GPU使用情况:
+nvidia-smi
+
+TensorFlow版本配套关系表：
+（cudnn、cuda、Python的配套关系，包含所有操作系统）
+https://blog.csdn.net/wanzhen4330/article/details/81660277
+
+Ubuntu测试是否已经存在python3:
+在终端输入python3,查看结果
+
+Ubuntu修改默认python为python3:
+https://blog.csdn.net/yucicheung/article/details/79334957
+
+cuda9.0 key
+sudo apt-key add /var/cuda-repo-9-0-local/7fa2af80.pub
+
+安装cuda:
+https://blog.csdn.net/shiorioxy/article/details/78850199
+安装cudnn:
+https://blog.csdn.net/shiorioxy/article/details/52652831
+
+多版本cuda切换:
+https://blog.csdn.net/tunhuzhuang1836/article/details/79545625
+
+安装任意版本的tensorflow-gpu:
+pip3 install tensorflow-gpu==版本号
+
+测试代码下载地址：
+https://github.com/chenhe82166/DRCN_tf
+
+keras指定运行时显卡及限制GPU用量:
+https://blog.csdn.net/A632189007/article/details/77978058
+
+虚拟环境的创建与使用：
+https://www.cnblogs.com/technologylife/p/6635631.html
