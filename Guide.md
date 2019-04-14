@@ -46,10 +46,33 @@ sudo service lightdm start
 ```
 在上述安装指令中，–no-opengl-files表示只安装驱动文件，不安装OpenGL文件，这个参数最重要。–no-x-check 安装驱动时不检查X服务。–no-nouveau-check 安装驱动时不检查nouveau（注：这个选项和禁止集成的nouveau驱动组成双保险，其实一项操作就可以了）。
 
-4. 查看显卡驱动版本
+4. 查看显卡驱动版本、显卡使用情况等
 ```
 nvidia-smi
 ```
 <img src="image/nvidia_smi_output.png" align="center" height="400" width="600"/>  
 
-显示以上内容即为安装成功
+显示以上内容即为安装成功  
+
+参考[链接](https://blog.csdn.net/qq_30163461/article/details/80314630)
+
+# 安装cuda
+到官网下载相应的.run文件并运行, 若已经安装过驱动, 则在安装过程中选择不安装NVIDIA驱动
+
+# 安装cudnn
+到官网下载相应的压缩文件
+```
+# 这里以cudnn-7.5-linux-x64-v5.1为例
+# 解压缩
+tar zxvf cudnn-7.5-linux-x64-v5.1.tgz
+
+# 复制文件到相应目录
+cd cuda
+sudo cp include/cudnn.h /usr/local/include
+sudo cp lib64/libcudnn.* /usr/local/lib
+
+# 建立软连接
+sudo ln -sf /usr/local/lib/libcudnn.so.5.1.3 /usr/local/lib/libcudnn.so.5
+sudo ln -sf /usr/local/lib/libcudnn.so.5 /usr/local/lib/libcudnn.so
+sudo ldconfig -v
+```
