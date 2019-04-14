@@ -1,3 +1,5 @@
+#{Ubuntu系统安装}
+
 Ubuntu安装时的硬盘分区:
 https://blog.csdn.net/u012052268/article/details/77145427
 (其中Swap分区设置为内存的1~2倍)
