@@ -29,3 +29,25 @@ sudo update-initramfs -u
 # 重启后执行以下命令, 若没有输出, 则说明已经禁用nouveau驱动
 lsmod | grep nouveau
 ```
+3. 开始安装
+```
+# 桌面版系统执行以下命令关闭图形界面
+sudo service lightdm stop
+
+# 卸载以前安装过的NVIDIA驱动
+sudo apt-get --purge remove nvidia-*
+
+# 安装指令, 以NVIDIA-Linux-x86_64-410.93.run为例
+sudo chmod a+x NVIDIA-Linux-x86_64-410.93.run
+sudo ./NVIDIA-Linux-x86_64-410.93.run -no-x-check -no-nouveau-check -no-opengl-files
+
+# 桌面版系统开启图形界面
+sudo service lightdm start
+```
+在上述安装指令中，–no-opengl-files表示只安装驱动文件，不安装OpenGL文件，这个参数最重要。–no-x-check 安装驱动时不检查X服务。–no-nouveau-check 安装驱动时不检查nouveau（注：这个选项和禁止集成的nouveau驱动组成双保险，其实一项操作就可以了）。
+
+4. 查看显卡驱动版本
+```
+nvidia-smi
+```
+![Output](image/nvidia_smi_output.png)
