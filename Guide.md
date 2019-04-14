@@ -50,5 +50,5 @@ sudo service lightdm start
 ```
 nvidia-smi
 ```
-<img src="image/nvidia_smi_output.png" align="left" height="600" width="900"/>
+<div align="center"><img src="image/nvidia_smi_output.png" align="left" height="400" width="600"/></div>
 显示以上内容即为安装成功
