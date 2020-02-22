@@ -82,7 +82,7 @@ sudo ldconfig -v
 ```
 
 # FAQ
-* 显卡驱动找不到解决方案
+* 输入nvidia -smi显示找不到显卡驱动时的解决方案
 ```
 sudo apt-get install dkms
 
