@@ -80,3 +80,16 @@ sudo ln -sf /usr/local/lib/libcudnn.so.5.1.3 /usr/local/lib/libcudnn.so.5
 sudo ln -sf /usr/local/lib/libcudnn.so.5 /usr/local/lib/libcudnn.so
 sudo ldconfig -v
 ```
+
+# FAQ
+* 显卡驱动找不到解决方案
+```
+sudo apt-get install dkms
+
+# 查看显卡驱动版本
+ls /usr/src
+
+# 这里410.93代表显卡驱动版本
+sudo dkms install -m nvidia -v 410.93
+```
+
