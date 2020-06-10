@@ -35,7 +35,7 @@
   sudo service lightdm stop
 
   # 卸载以前安装过的NVIDIA驱动
-  sudo apt-get --purge remove nvidia-*
+  sudo apt-get --purge remove nvidia*
 
   # 安装指令, 以NVIDIA-Linux-x86_64-410.93.run为例
   sudo chmod a+x NVIDIA-Linux-x86_64-410.93.run
